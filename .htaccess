@@ -1,0 +1,19 @@
+# Enable RewriteEngine
+RewriteEngine On
+
+# Remove .php extension from URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.+)$ $1.php [L,QSA]
+
+# Redirect index.php to root (optional)
+RewriteRule ^index$ index.php [L,QSA]
+
+# Ensure direct access to existing files (CSS, JS, images) is allowed
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Redirect non-www to www (optional)
+RewriteCond %{HTTP_HOST} ^yourdomain.com [NC]
+RewriteRule ^(.*)$ https://www.yourdomain.com/$1 [L,R=301]
