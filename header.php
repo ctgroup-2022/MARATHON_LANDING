@@ -9,13 +9,13 @@
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/images/logo1.jpg" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
+  
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -64,15 +64,15 @@
   <!-- Hero Section -->
   <div class="container-fluid">
     <div class="row justify-content-center">
-      <div class="col-12" style="height:800px; background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('images/bc5.avif'); background-size: cover; background-repeat: no-repeat;">
-        <div class="row justify-content-center">
-          <div class="col-6 a1 d-flex justify-content-center align-items-center" style="height:600px;">
-            <h1 class="fw-bolder text-light text-center" style="font-size:80px; font-family:carsive; margin-left:100px;">RUN FOR THE<br> PLANET
+      <div class="col-12 hero-section" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('images/bc5.avif'); background-size: cover; background-repeat: no-repeat;">
+        <div class="row justify-content-center align-items-center gap-3" style="height: 100%;">
+          <div class="col-lg-5 col-md-12 d-flex justify-content-center align-items-center hero-text">
+            <h1 class="fw-bolder text-light text-center" style="font-size:80px; font-family:carsive; ">RUN FOR THE PLANET
               <p style="color:#e02454; letter-spacing:2px;">चल अब उठ</p>
             </h1>
           </div>
-          <div class="col-6 d-flex justify-content-center align-items-center">
-            <div class="card opacity-75" style="margin-top: 100px;">
+          <div class="col-lg-5 col-md-12 d-flex justify-content-center align-items-center">
+            <div class="card opacity-75 mt-5 mt-lg-0">
               <h2 style="color:#e02454;">Personal Information</h2>
               <form action="../controllers/registerController.php" method="POST" style="opacity: 0.9;">
                 <div class="form-group">
@@ -104,7 +104,7 @@
                   <label for="dob">Date of Birth</label>
                   <input type="date" id="dob" name="dob" required>
                 </div>
-                <button type="submit" class="btn btn-danger fw-bold fs-4 r" style="color:white; width:350px;">Submit</button>
+                <button type="submit" class="btn btn-danger fw-bold fs-4 r" style="color:white; width:100%;">Submit</button>
               </form>
             </div>
           </div>
@@ -112,11 +112,19 @@
       </div>
     </div>
   </div>
-  </div>
 
+  <style>
+    @media (min-width: 750px) and (max-width: 1000px) {
+      .hero-section {
+        min-height: 200vh;
+      }
+    }
 
-
-
-
-
-  </section><!-- /Hero Section -->
+    @media (min-width: 992px) {
+      .hero-text {
+        margin-right: 100px;
+      }
+    }
+  </style>
+</body>
+</html>
