@@ -50,7 +50,7 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.php" class="active">Home</a></li>
-          <li><a href="Information.php">Marathon Information</a></li>
+          <li><a href="information.php">Marathon Information</a></li>
           <li><a href="gallery.php">Gallery</a></li>
      
         </ul>
